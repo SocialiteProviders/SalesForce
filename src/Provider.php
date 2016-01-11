@@ -72,7 +72,7 @@ class Provider extends AbstractProvider implements ProviderInterface
             'salesforce_address' => $user['address'],
             'salesforce_active' => $user['active'],
             'salesforce_user_type' => $user['user_type'],
-            'salesforce_language' => $user['salesforce_language'],
+            'salesforce_language' => $user['language'],
             'salesforce_utc_offset' => $user['utcOffset'],
         ]);
     }
