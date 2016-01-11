@@ -66,6 +66,8 @@ class Provider extends AbstractProvider implements ProviderInterface
             'email' => isset($user['email']) ? $user['email'] : null,
             'email_verified' => $user['email_verified'],
             'avatar' => $user['picture'],
+            'thumbnail' => array_get($user, 'photos.thumbnail'),
+            'picture' => $user['picture'],
             'salesforce_urls' => $user['urls'],
             'salesforce_address' => $user['address'],
             'salesforce_active' => $user['active'],
