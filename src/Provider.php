@@ -38,10 +38,8 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getUserByToken($token)
     {
-        // todo need to get information from authentication response
-        // That already
         $response = $this->getHttpClient()->get(
-            'https://api.spotify.com/v1/me', [
+            'https://login.salesforce.com/services/oauth2/userinfo', [
             'headers' => [
                 'Accept' => 'application/json',
                 'Authorization' => 'Bearer '.$token,
