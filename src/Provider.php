@@ -43,7 +43,7 @@ class Provider extends AbstractProvider implements ProviderInterface
             'headers' => [
                 'Accept' => 'application/json',
                 'Authorization' => 'Bearer '.$token,
-            ],
+            ),
         ]);
 
         return json_decode($response->getBody()->getContents(), true);
@@ -55,10 +55,11 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'name' => $user['name'],
-            'email' => isset($user['email']) ? $user['email'] : null,
-            'avatar' => $user['picture'],
-            'nickname' => $user['nickname'],
+            'id' => array_get($user, 'user_id'),
+            'name' => array_get($user,'name'),
+            'email' => array_get($user,'email'),
+            'avatar' => array_get($user,'picture'),
+            'nickname' => array_get($user,'nickname'),
         ]);
     }
 
