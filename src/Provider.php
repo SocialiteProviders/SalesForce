@@ -8,6 +8,8 @@ use SocialiteProviders\Manager\OAuth2\User;
 
 class Provider extends AbstractProvider implements ProviderInterface
 {
+    const PROVIDER_NAME = 'salesforce';
+
     /**
      * The separating character for the requested scopes.
      *

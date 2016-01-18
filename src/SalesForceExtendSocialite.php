@@ -14,7 +14,7 @@ class SalesForceExtendSocialite
     public function handle(SocialiteWasCalled $socialiteWasCalled)
     {
         $socialiteWasCalled->extendSocialite(
-            'salesforce', __NAMESPACE__.'\Provider'
+            Provider::PROVIDER_NAME, __NAMESPACE__.'\Provider'
         );
     }
 }
