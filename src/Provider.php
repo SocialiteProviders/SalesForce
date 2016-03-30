@@ -8,6 +8,11 @@ use SocialiteProviders\Manager\OAuth2\User;
 
 class Provider extends AbstractProvider implements ProviderInterface
 {
+    /**
+     * Unique Provider Identifier.
+     */
+    const IDENTIFIER = 'SALESFORCE';
+
     const PROVIDER_NAME = 'salesforce';
 
     /**
