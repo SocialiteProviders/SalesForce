@@ -26,7 +26,7 @@ class Provider extends AbstractProvider implements ProviderInterface
      * Get the instance URL from config
      * If not available default to production.
      *
-     * @return String Salesforce base URL
+     * @return string Salesforce base URL
      */
     private function getInstanceURL()
     {
