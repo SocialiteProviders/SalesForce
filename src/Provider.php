@@ -21,11 +21,11 @@ class Provider extends AbstractProvider implements ProviderInterface
      * @var string
      */
     protected $scopeSeparator = ' ';
-    
+
     /**
      * Get the instance URL from config
      * If not available default to production.
-     * 
+     *
      * @return String Salesforce base URL
      */
     private function getInstanceURL()
